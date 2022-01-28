@@ -9,7 +9,6 @@ var Chain *block.BlockChain
 //New returns echo object
 func New() *echo.Echo {
 	InitEnvironmentVariables()
-	initChain()
 	echoInstance := echo.New()
 	// Configuring Middleware Logger
 	echoInstance.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
@@ -27,6 +26,6 @@ func New() *echo.Echo {
 	return echoInstance
 }
 
-func initChain(){
+func InitChain(){
 	Chain = block.InitBlockChain()
 }

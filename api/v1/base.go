@@ -16,6 +16,7 @@ func BlockRouter(g *echo.Group) {
 	g.GET("/", generateRandomBlocks)
 }
 func generateRandomBlocks(context echo.Context) error {
+	config.InitChain()
 	config.Chain.AddBlock(strconv.Itoa(count)+" Block after Genesis")
 	return context.JSON(200,config.Chain.Blocks)
 }
