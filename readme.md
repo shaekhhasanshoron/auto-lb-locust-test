@@ -11,3 +11,6 @@ Apply ingress if needed,
 ####  To port-forward:
 
 ```kubectl port-forward svc/locust-master 8081:8089```
+
+kubectl port-forward svc/locust-master 8081:8089
+https://auto-lb-locust-yqgyiafw-qrpactdj-prod.bd-1.wpc.waltonelectronics.com/api/v1/blocks
